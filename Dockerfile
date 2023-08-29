@@ -5,7 +5,7 @@ COPY pom.xml /build/
 COPY src /build/src/
 WORKDIR /build/
 
-RUN mvn clean package -Dmaven.test.skip=true -T 1C -B -e -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn 
+RUN mvn clean package 
 
 FROM amazoncorretto:17-alpine-jdk
 
