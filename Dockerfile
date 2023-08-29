@@ -15,6 +15,6 @@ ENV SPRING_ACTIVE_PROFILE $ACTIVE_PROFILE
 
 WORKDIR /app
 
-COPY --from=MAVEN_BUILD /build/target/HelloWorld.jar /app/app.jar
+COPY --from=MAVEN_BUILD /build/jb-hello-world-maven-*.jar /app/app.jar
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
